@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ai Image Generator</title>
+</head>
+<body>
+    <!--Header Section-->
+    <div class="container">
+        <div class="header">
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                </div>
+                <h1>Ai Image Generator</h1>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    
+
+    <div class="main-content">
+        <form action="#" method="POST" class="prompt-form" onsubmit="event.preventDefault();">
+            <!--Prompt Container-->
+            <div class="prompt-container">
+                <textarea class="prompt-input" placeholder="Describe what image you want to be generated..." required autofocus></textarea>
+                <button class="generate-btn">
+                    <i class="fa-solid fa-dice" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!--Prompt Action/Button-->
+            <div class="prompt-actions">
+                <div class="select-wrapper">
+                    <select class="custom-select" required>
+                        <option value="" selected disabled>Select Model</option>
+                        <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
+                        <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</option>
+                        <option value="stabilityai/stable-diffusion-xl-base-1.0">Stable Diffusion XL</option>
+                        <option value="runwayml/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
+                        <option value="prompthero/openjourney">OpenJourney</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <select class="custom-select" required>
+                        <option value="" selected disabled>Image Count</option>
+                        <option value="1">Generate 1 Image</option>
+                        <option value="2">Generate 2 Images</option>
+                        <option value="3">Generate 3 Images</option>
+                        <option value="4">Generate 4 Images</option>
+                    </select>
+                </div>
+
+                <div class="select-wrapper">
+                    <select class="custom-select" required>
+                        <option value="" selected disabled>Aspect Ratio</option>
+                        <option value="1/1">Square 1:1 Dimension</option>
+                        <option value="16/9">Landscape 16:9 Dimension </option>
+                        <option value="9/16">Portrait 9:16 Dimension</option>      
+                    </select>
+                </div>
+                <button type="submit" class="generate-button">
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                    Generate
+                </button>
+            </div>
+            <!--Image Result Grid-->
+            <div class="gallery-grid">
+                <div class="image-card">
+                    <img src="test.png" class="result-image">
+                    <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="test.png" class="result-image">
+                    <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="test.png" class="result-image">
+                    <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="test.png" class="result-image">
+                    <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
